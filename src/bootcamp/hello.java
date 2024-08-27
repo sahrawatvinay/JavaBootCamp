@@ -1,7 +1,33 @@
 package bootcamp;
 
 public class hello {
-    public static void main(String[] args){
+    public static void printArrays(int[] oneDarray, int[][] twoDarray) {
+        for (int i = 0; i < oneDarray.length; i++) {
+            System.out.print(oneDarray[i] + " ");
+        }
+        System.out.println();
+
+        //enhanced for loop
+        for (int x : oneDarray)
+            System.out.print(x + " ");
+        System.out.println();
+
+        for (int i = 0; i < twoDarray.length; i++) {
+            for (int j = 0; j < twoDarray[i].length; j++) {
+                System.out.print(twoDarray[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+        for (int[] x : twoDarray) {
+            for (int j : x) {
+                System.out.print(j + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void main(String[] args) {
         // 1. Basic Data Types
         byte byteVar = 10;
         short shortVar = 1000;
@@ -42,13 +68,6 @@ public class hello {
 
         // 3. 1D Array
         int[] oneDArray = {10, 20, 30, 40, 50};
-        System.out.println("\n1D Array Elements:");
-        for (int i = 0; i < oneDArray.length; i++) {
-            System.out.println("Element at index " + i + ": " + oneDArray[i]);
-        }
-
-        for(int i: oneDArray)
-            System.out.println(i);
 
         // 4. 2D Array
         int[][] twoDArray = {
@@ -56,28 +75,7 @@ public class hello {
                 {4, 5, 6},
                 {7, 8, 9}
         };
-
-        System.out.println("\n2D Array Elements:");
-        for (int i = 0; i < twoDArray.length; i++) {
-            for (int j = 0; j < twoDArray[i].length; j++) {
-                System.out.print(twoDArray[i][j] + " ");
-            }
-            System.out.println();
-        }
-
-        // 5. Enhanced for loop (For-each) for array traversal
-        System.out.println("\n1D Array Traversal using Enhanced For Loop:");
-        for (int element : oneDArray) {
-            System.out.println("Element: " + element);
-        }
-
-        System.out.println("\n2D Array Traversal using Enhanced For Loop:");
-        for (int[] row : twoDArray) {
-            for (int element : row) {
-                System.out.print(element + " ");
-            }
-            System.out.println();
-        }
+        printArrays(oneDArray, twoDArray);
 
         // Math.min() and Math.max()
         int a = 10;
@@ -103,7 +101,7 @@ public class hello {
         System.out.println("Random value between 0.0 and 1.0: " + randomValue);
 
         // Generate a random integer between 1 and 100
-        int randomInt = (int)(Math.random() * 100) + 1;
+        int randomInt = (int) (Math.random() * 100) + 1;
         System.out.println("Random integer between 1 and 100: " + randomInt);
 
         // Math.floor()
