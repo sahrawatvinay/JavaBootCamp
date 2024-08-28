@@ -27,7 +27,11 @@ public class hello {
         }
     }
 
-    public static void main(String[] args) {
+    public static void greet() {
+        System.out.println("Hello");
+    }
+
+    public static <bool> void main(String[] args) {
         // 1. Basic Data Types
         byte byteVar = 10;
         short shortVar = 1000;
@@ -115,5 +119,8 @@ public class hello {
         // Math.round()
         double roundValue = Math.round(2.5);
         System.out.println("Rounded value of 2.5 is: " + roundValue);
+
+        boolean result = a > b;
+        greet();
     }
 }
