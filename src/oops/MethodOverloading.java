@@ -1,11 +1,13 @@
 package oops;
 
 /*
-* method with same name but different params
-* different number of arguments
+* method with same name but different params.
+* different number of arguments.
 * ---or---
-* different type of arguments
-* different return type cant determine overloading
+* different type of arguments.
+* different return type cant determine overloading.
+* overloading is determined at compile time.
+* This is why it's referred to as compile-time polymorphism or static polymorphism.
 * */
 class Greet {
     void greetings() {
